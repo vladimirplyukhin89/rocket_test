@@ -1,0 +1,23 @@
+@import "normalize.css";
+
+:root {
+	--bg-white: rgb(255, 255, 255);
+	--bg-milk: rgb(248, 251, 250);
+	--bg-dark-green: rgb(8, 102, 79);
+	--bg-light-green: rgb(226, 240, 239);
+	--bg-dekstop-header: rgb(31, 161, 129);
+	--bg-mobile-header: rgb(69, 146, 127);
+	--clr-button: rgb(13, 188, 145);
+	--clr-hover-button: rgb(0, 210, 159);
+	--clr-black: rgb(54, 72, 68);
+	--clr-grey: rgb(219, 219, 219);
+	/* font size for using rem - 10px */
+	--font-size-base: 62.5%;
+}
+
+html {
+	font-family: "PT Sans Caption", "Ubuntu", sans-serif;
+	font-size: var(--font-size-base);
+	background-color: var(--bg-white);
+	color: var(--clr-black);
+}
