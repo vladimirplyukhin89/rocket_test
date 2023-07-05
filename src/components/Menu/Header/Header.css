@@ -16,6 +16,7 @@
 
 .header__logo {
 	width: 62px;
+	color: var(--clr-button);
 }
 
 .header__contact-info {

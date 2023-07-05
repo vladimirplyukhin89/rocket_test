@@ -22,8 +22,8 @@ export const Navigation: FC<IProps> = ({ isOpen }) => {
 			<Layout>
 				<nav className="navigation__wrapper">
 					<ul className="navigation__links">
-						{list.map((item: string) => (
-							<li>
+						{list.map((item: string, index: number) => (
+							<li key={index}>
 								<span className="navigation__link">{item}</span>
 							</li>
 						))}
