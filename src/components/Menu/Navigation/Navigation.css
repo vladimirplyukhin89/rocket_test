@@ -44,8 +44,45 @@
 	border: 1px solid var(--bg-header);
 }
 
+.navigation__btn:hover,
+.navigation__btn:active {
+	color: var(--bg-white);
+	background-color: var(--clr-button);
+	box-shadow: 0 4px 6px var(--bg-white);
+	border: 1px solid var(--clr-button);
+}
+
 .isOpen {
 	transform: translate(110%);
 	opacity: 0.9;
 	z-index: 2;
+}
+
+@media screen and (min-width: 767px) {
+	.navigation {
+		height: 45px;
+		margin-top: 10px;
+		background-color: var(--bg-dekstop-nav);
+	}
+
+	.navigation__wrapper {
+		padding: 10px 0;
+	}
+
+	.navigation__link {
+		margin-bottom: 0;
+	}
+
+	.navigation__links {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.navigation__link {
+		margin-right: 30px;
+	}
+
+	.navigation__btn {
+		display: none;
+	}
 }

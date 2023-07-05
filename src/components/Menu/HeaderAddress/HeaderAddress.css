@@ -1,0 +1,35 @@
+.header-address {
+	display: none;
+}
+
+.header-address__wrapper {
+	font-size: 14px;
+	padding: 5px 0;
+}
+
+.header-address__icon {
+	margin-right: 5px;
+	display: flex;
+	align-self: flex-start;
+	color: var(--clr-grey-secondary);
+	transition: transform 1.5s;
+}
+
+.header-address__icon:hover {
+	transform: translateY(-10px);
+	color: var(--bg-mobile-nav);
+}
+
+.header-address__city {
+	color: var(--clr-black);
+}
+
+.header-address__street {
+	color: var(--clr-grey-secondary);
+}
+
+@media screen and (min-width: 767px) {
+	.header-address {
+		display: inline-flex;
+	}
+}

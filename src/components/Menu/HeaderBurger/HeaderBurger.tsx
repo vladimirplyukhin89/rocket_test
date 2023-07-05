@@ -1,13 +1,13 @@
 import { Dispatch, FC } from "react";
 
-import "./HeaderBtn.css";
+import "./HeaderBurger.css";
 
 interface IProps {
 	isOpen: boolean;
 	setIsOpen: Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const HeaderBtn: FC<IProps> = ({ isOpen, setIsOpen }) => {
+export const HeaderBurger: FC<IProps> = ({ isOpen, setIsOpen }) => {
 	return (
 		<div
 			onClick={() => setIsOpen(!isOpen)}

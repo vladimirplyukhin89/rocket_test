@@ -3,7 +3,7 @@ import { FC, SVGProps } from "react";
 import Layout from "../Layout";
 import { ReactComponent as IconLogo } from "../../assets/logo.svg";
 import { ReactComponent as IconInstagram } from "./icons/instagram.svg";
-import { ReactComponent as IconWhatsup } from "./icons/whatsup.svg";
+import { ReactComponent as IconWhatsApp } from "./icons/whatsapp.svg";
 import { ReactComponent as IconTelegram } from "./icons/telegram.svg";
 import "./Footer.css";
 
@@ -14,6 +14,7 @@ interface IconProps {
 		}
 	>;
 	alt: string;
+	href: string;
 }
 
 const list: string[] = [
@@ -25,9 +26,9 @@ const list: string[] = [
 ];
 
 const icons: IconProps[] = [
-	{ Icon: IconInstagram, alt: "instagram" },
-	{ Icon: IconWhatsup, alt: "whatsup" },
-	{ Icon: IconTelegram, alt: "telegram" },
+	{ Icon: IconInstagram, alt: "instagram", href: "https://www.instagram.com/" },
+	{ Icon: IconWhatsApp, alt: "whatsapp", href: "https://www.whatsapp.com/" },
+	{ Icon: IconTelegram, alt: "telegram", href: "https://telegram.org/" },
 ];
 
 export const Footer: FC = () => {
@@ -49,9 +50,13 @@ export const Footer: FC = () => {
 					</div>
 
 					<ul className="footer__icons">
-						{icons.map(({ Icon }, index: number) => (
+						{icons.map(({ Icon, href }, index: number) => (
 							<li className="footer__icon" key={index}>
-								<Icon className="footer__icon-image" />
+								{Icon && (
+									<a href={href} target="_blanc">
+										<Icon className="footer__icon-image" />
+									</a>
+								)}
 							</li>
 						))}
 					</ul>

@@ -1,5 +1,5 @@
 .hero {
-	height: 600px;
+	margin-bottom: 51px;
 }
 
 .hero__wrapper {
@@ -15,7 +15,6 @@
 .hero__content {
 	height: 261px;
 	background-color: var(--bg-milk);
-	margin-bottom: 51px;
 }
 
 .hero__title {
@@ -24,7 +23,6 @@
 	padding-top: 35px;
 	margin-bottom: 9px;
 	max-width: 270px;
-	/* width: fit-content; */
 }
 
 .hero__subtitle {

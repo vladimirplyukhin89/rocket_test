@@ -93,6 +93,7 @@
 
 	.footer__link {
 		font-size: 16px;
+		margin-bottom: 0;
 	}
 
 	.footer__links li:last-child {

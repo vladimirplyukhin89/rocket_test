@@ -1,0 +1,60 @@
+.header-phone {
+	display: block;
+}
+
+.header-phone__icon {
+	display: none;
+}
+
+.header-phone__phone {
+	font-weight: 700;
+}
+
+.header-phone__phone:hover,
+.header-phone__phone:active {
+	color: var(--clr-hover-button);
+}
+
+.header-phone__location {
+	font-size: 13px;
+}
+
+@media screen and (min-width: 767px) {
+	.header-phone {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-phone__icon {
+		display: block;
+	}
+
+	.header-phone:hover .header-phone__icon {
+		animation: 1.5s ease-in-out 0s normal none running trambling-animation;
+	}
+
+	.header-phone__phone {
+		font-weight: 500;
+		margin-left: 5px;
+	}
+
+	.header-phone__location {
+		display: none;
+	}
+}
+
+@keyframes trambling-animation {
+	0%,
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
+	10%,
+	30% {
+		transform: rotate(-10deg);
+	}
+	20%,
+	40% {
+		transform: rotate(10deg);
+	}
+}

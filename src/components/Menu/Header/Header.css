@@ -26,15 +26,40 @@
 	align-items: flex-end;
 }
 
-.header__phone {
-	font-weight: 700;
+.header__contact-btn {
+	display: none;
 }
 
-.header__phone:hover,
-.header__phone:active {
-	color: var(--clr-hover-button);
+.header__contact-btn:hover,
+.header__contact-btn:active {
+	background-color: var(--clr-hover-button);
+	box-shadow: 0 4px 6px var(--clr-button);
 }
 
-.header__location {
-	font-size: 13px;
+@media screen and (min-width: 767px) {
+	.header__wrapper {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.header__logo-container {
+		justify-content: flex-start;
+	}
+
+	.header__logo {
+		margin-right: 20px;
+		width: 92px;
+	}
+
+	.header__contact-info {
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.header__contact-btn {
+		color: var(--bg-white);
+		background-color: var(--clr-button);
+		margin-left: 35px;
+		display: block;
+	}
 }

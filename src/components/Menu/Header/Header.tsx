@@ -2,7 +2,10 @@ import { Dispatch, FC } from "react";
 
 import { ReactComponent as IconLogo } from "../../../assets/logo.svg";
 import Layout from "../../Layout";
-import HeaderBtn from "../HeaderBtn";
+import HeaderBurger from "../HeaderBurger";
+import HeaderAddress from "../HeaderAddress";
+import Button from "../../../UI/Button";
+import HeaderPhone from "../HeaderPhone";
 import "./Header.css";
 
 interface IProps {
@@ -16,14 +19,16 @@ export const Header: FC<IProps> = ({ isOpen, setIsOpen }) => {
 			<Layout>
 				<header className="header__wrapper">
 					<div className="header__logo-container">
-						<HeaderBtn isOpen={isOpen} setIsOpen={setIsOpen} />
+						<HeaderBurger isOpen={isOpen} setIsOpen={setIsOpen} />
 						<IconLogo className="header__logo" />
+						<HeaderAddress />
 					</div>
 					<div className="header__contact-info">
-						<a href="tel:+78630000000" className="header__phone">
-							+7(863) 000 00 00
-						</a>
-						<p className="header__location">Ростов-на-Дону</p>
+						<HeaderPhone />
+						<Button
+							text="Записаться на прием"
+							className="header__contact-btn"
+						/>
 					</div>
 				</header>
 			</Layout>
