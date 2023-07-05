@@ -5,19 +5,68 @@
 	--bg-milk: rgb(248, 251, 250);
 	--bg-dark-green: rgb(8, 102, 79);
 	--bg-light-green: rgb(226, 240, 239);
-	--bg-dekstop-header: rgb(31, 161, 129);
-	--bg-mobile-header: rgb(69, 146, 127);
+	--bg-header: rgb(246, 246, 246);
+	--bg-dekstop-nav: rgb(31, 161, 129);
+	--bg-mobile-nav: rgb(69, 146, 127);
 	--clr-button: rgb(13, 188, 145);
 	--clr-hover-button: rgb(0, 210, 159);
 	--clr-black: rgb(54, 72, 68);
 	--clr-grey: rgb(219, 219, 219);
-	/* font size for using rem - 10px */
-	--font-size-base: 62.5%;
+	--font-size-base: 16px;
 }
 
 html {
-	font-family: "PT Sans Caption", "Ubuntu", sans-serif;
+	position: relative;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "PT Sans Caption", "Ubuntu", serif;
 	font-size: var(--font-size-base);
 	background-color: var(--bg-white);
 	color: var(--clr-black);
+	max-width: 1920px;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	padding: 0;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+	margin: 0;
+}
+
+iframe {
+	border: none;
 }

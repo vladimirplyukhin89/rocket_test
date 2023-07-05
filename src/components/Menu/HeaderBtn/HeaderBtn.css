@@ -1,0 +1,47 @@
+.header-btn {
+	width: 37px;
+	height: 25px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.header-btn span {
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background-color: var(--bg-dekstop-nav);
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: 0.25s ease-in-out;
+}
+
+.header-btn span:nth-child(1) {
+	top: 0px;
+}
+
+.header-btn span:nth-child(2) {
+	top: 10px;
+}
+
+.header-btn span:nth-child(3) {
+	top: 20px;
+}
+
+.open span:nth-child(1) {
+	top: 10px;
+	transform: rotate(135deg);
+}
+
+.open span:nth-child(2) {
+	opacity: 0;
+	left: -60px;
+}
+
+.open span:nth-child(3) {
+	top: 10px;
+	transform: rotate(-135deg);
+}

@@ -1,0 +1,39 @@
+.header {
+	background-color: var(--bg-header);
+}
+
+.header__wrapper {
+	display: grid;
+	grid-template-columns: 140px 1fr;
+	padding: 20px 0;
+}
+
+.header__logo-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	width: 62px;
+}
+
+.header__contact-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.header__phone {
+	font-weight: 700;
+}
+
+.header__phone:hover,
+.header__phone:active {
+	color: var(--clr-hover-button);
+}
+
+.header__location {
+	font-size: 13px;
+}
