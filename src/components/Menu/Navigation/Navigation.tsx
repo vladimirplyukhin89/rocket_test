@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 
 import Layout from "../../Layout";
 import Button from "../../../UI/Button";
+import { WindowSizeContext } from "../../../context/windowSizeContext";
 import "./Navigation.css";
 
 const list: string[] = [
@@ -12,13 +13,11 @@ const list: string[] = [
 	"Контакты",
 ];
 
-interface IProps {
-	isOpen: boolean;
-}
+export const Navigation: FC = () => {
+	const { isOpen, size } = useContext(WindowSizeContext);
 
-export const Navigation: FC<IProps> = ({ isOpen }) => {
 	return (
-		<div className={`navigation ${isOpen ? "isOpen" : ""}`}>
+		<div className={`navigation ${isOpen && size.width < 768 ? "isOpen" : ""}`}>
 			<Layout>
 				<nav className="navigation__wrapper">
 					<ul className="navigation__links">

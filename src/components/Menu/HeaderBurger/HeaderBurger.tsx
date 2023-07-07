@@ -1,13 +1,11 @@
-import { Dispatch, FC } from "react";
+import { FC, useContext } from "react";
 
+import { WindowSizeContext } from "../../../context/windowSizeContext";
 import "./HeaderBurger.css";
 
-interface IProps {
-	isOpen: boolean;
-	setIsOpen: Dispatch<React.SetStateAction<boolean>>;
-}
+export const HeaderBurger: FC = () => {
+	const { isOpen, setIsOpen } = useContext(WindowSizeContext);
 
-export const HeaderBurger: FC<IProps> = ({ isOpen, setIsOpen }) => {
 	return (
 		<div
 			onClick={() => setIsOpen(!isOpen)}

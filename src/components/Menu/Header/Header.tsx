@@ -1,4 +1,4 @@
-import { Dispatch, FC } from "react";
+import { FC } from "react";
 
 import { ReactComponent as IconLogo } from "../../../assets/logo.svg";
 import Layout from "../../Layout";
@@ -8,18 +8,13 @@ import Button from "../../../UI/Button";
 import HeaderPhone from "../HeaderPhone";
 import "./Header.css";
 
-interface IProps {
-	isOpen: boolean;
-	setIsOpen: Dispatch<React.SetStateAction<boolean>>;
-}
-
-export const Header: FC<IProps> = ({ isOpen, setIsOpen }) => {
+export const Header: FC = () => {
 	return (
 		<div className="header">
 			<Layout>
 				<header className="header__wrapper">
 					<div className="header__logo-container">
-						<HeaderBurger isOpen={isOpen} setIsOpen={setIsOpen} />
+						<HeaderBurger />
 						<IconLogo className="header__logo" />
 						<HeaderAddress />
 					</div>
