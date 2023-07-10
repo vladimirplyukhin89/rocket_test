@@ -1,0 +1,19 @@
+.carousel {
+	display: flex;
+	flex-direction: column;
+	/* height: 100%; */
+}
+
+.carousel__background-image {
+	background: url("./image/doctor.jpg") center/cover no-repeat;
+	min-height: 170px;
+	max-height: 440px;
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (min-width: 767px) {
+	.carousel {
+		flex-direction: row-reverse;
+	}
+}
