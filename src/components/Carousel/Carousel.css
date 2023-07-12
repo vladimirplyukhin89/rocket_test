@@ -1,19 +1,79 @@
-.carousel {
+.carousel__wrapper {
 	display: flex;
 	flex-direction: column;
-	/* height: 100%; */
 }
 
 .carousel__background-image {
 	background: url("./image/doctor.jpg") center/cover no-repeat;
 	min-height: 170px;
 	max-height: 440px;
-	height: 100%;
 	width: 100%;
 }
 
+.carousel__content {
+	background-color: var(--bg-light-green);
+	padding: 22px 23px 42px;
+	position: relative;
+}
+
+.carousel__btn-register {
+	background-color: var(--clr-button);
+	color: var(--bg-white);
+	margin-right: 6px;
+}
+
+.carousel__btn-register:hover,
+.carousel__btn-register:active {
+	background-color: var(--clr-hover-button);
+	box-shadow: 0 4px 6px var(--clr-button);
+}
+
+.carousel__btn-info {
+	background-color: inherit;
+	border: 1px solid var(--clr-button);
+	color: var(--clr-button);
+}
+
+.carousel__btn-info:hover,
+.carousel__btn-info:active {
+	color: var(--bg-white);
+	background-color: var(--clr-button);
+	box-shadow: 0 4px 6px var(--clr-button);
+	border: 1px solid var(--clr-button);
+}
+
+@media screen and (min-width: 479px) {
+	.carousel__background-image {
+		height: 270px;
+	}
+}
+
+@media screen and (min-width: 575px) {
+	.carousel__background-image {
+		height: 300px;
+	}
+}
+
 @media screen and (min-width: 767px) {
-	.carousel {
-		flex-direction: row-reverse;
+	.carousel__wrapper {
+		flex-direction: row;
+		position: relative;
+	}
+
+	.carousel__background-image {
+		height: auto;
+		clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	.carousel__content {
+		clip-path: polygon(0 0, 80% 0%, 100% 100%, 0 100%);
+		min-width: 500px;
+		width: 50%;
 	}
 }

@@ -1,6 +1,9 @@
 import { FC, Dispatch } from "react";
 
+import { ReactComponent as IconBack } from "./image/back.svg";
+import { ReactComponent as IconForward } from "./image/forward.svg";
 import "./CarouselNavigation.css";
+import Button from "../../../UI/Button";
 
 interface IProps {
 	currentPage: number;
@@ -15,23 +18,23 @@ export const CarouselNavigation: FC<IProps> = ({
 }) => {
 	return (
 		<div className="carousel__navigation">
-			<button
-				className="carousel__navigation-btn"
+			<Button
+				className="carousel__navigation-back"
 				disabled={currentPage === 1}
 				onClick={() => setCurrentPage(currentPage - 1)}
 			>
-				&lt; Назад
-			</button>
-			<span className="carousel__navigation-page">
-				{currentPage} / {totalPages}
-			</span>
-			<button
-				className="carousel__navigation-btn"
+				<IconBack />
+			</Button>
+			<div className="carousel__navigation-page">
+				<span>{currentPage}</span>/{totalPages}
+			</div>
+			<Button
+				className="carousel__navigation-forward"
 				disabled={currentPage === totalPages}
 				onClick={() => setCurrentPage(currentPage + 1)}
 			>
-				Вперед &gt;
-			</button>
+				<IconForward />
+			</Button>
 		</div>
 	);
 };

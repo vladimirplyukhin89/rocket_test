@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { WindowSizeProvider } from "./context/windowSizeContext";
+import { WindowSizeProvider } from "./context";
+import { ModalContextProvider } from "./context";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<WindowSizeProvider>
-			<App />
-		</WindowSizeProvider>
+		<ModalContextProvider>
+			<WindowSizeProvider>
+				<App />
+			</WindowSizeProvider>
+		</ModalContextProvider>
 	</React.StrictMode>
 );

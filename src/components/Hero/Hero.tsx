@@ -13,12 +13,14 @@ export const Hero: FC<IProps> = ({ title, subtitle }) => {
 		<section className="hero">
 			<div className="hero__wrapper">
 				<div className="hero__image" />
-				<div className="hero__content">
-					<Layout>
-						<h1 className="hero__title">{title}</h1>
-						<p className="hero__subtitle">{subtitle}</p>
-					</Layout>
-				</div>
+				<Layout className="layout-background">
+					<div className="hero__content">
+						<Layout className="layout-reset">
+							<h1 className="hero__title">{title}</h1>
+							<p className="hero__subtitle">{subtitle}</p>
+						</Layout>
+					</div>
+				</Layout>
 			</div>
 		</section>
 	);

@@ -14,7 +14,6 @@
 
 .hero__content {
 	height: 261px;
-	background-color: var(--bg-milk);
 }
 
 .hero__title {
@@ -27,7 +26,11 @@
 
 .hero__subtitle {
 	font-size: 14px;
-	max-width: 290px;
+	max-width: 270px;
+}
+
+.layout-reset {
+	padding: 0;
 }
 
 @media screen and (min-width: 369px) {
@@ -45,7 +48,7 @@
 	.hero__image,
 	.hero__content {
 		height: 100%;
-		width: 50%;
+		width: 100%;
 	}
 
 	.hero__content {
@@ -57,10 +60,15 @@
 	.hero__title {
 		font-size: 36px;
 		margin-bottom: 14px;
+		max-width: 370px;
 	}
 
 	.hero__subtitle {
 		font-size: 16px;
-		max-width: 370px;
+	}
+
+	.layout-background {
+		background-color: var(--bg-milk);
+		width: 100%;
 	}
 }

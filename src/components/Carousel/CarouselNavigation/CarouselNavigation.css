@@ -1,0 +1,57 @@
+.carousel__navigation {
+	margin-top: 22px;
+	margin-bottom: 35px;
+	display: flex;
+	justify-content: center;
+}
+
+.carousel__navigation-back,
+.carousel__navigation-forward {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+}
+
+.carousel__navigation-back {
+	margin-right: 20px;
+}
+
+.carousel__navigation-forward {
+	margin-left: 20px;
+}
+
+.carousel__navigation-back svg,
+.carousel__navigation-forward svg {
+	color: var(--clr-grey);
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+}
+
+.carousel__navigation-back svg:hover,
+.carousel__navigation-forward svg:hover,
+.carousel__navigation-forward svg:active,
+.carousel__navigation-forward svg:active {
+	color: var(--clr-hover-button);
+}
+
+.carousel__navigation-back:disabled svg,
+.carousel__navigation-forward:disabled svg {
+	color: var(--clr-black);
+}
+
+.carousel__navigation-back:disabled svg:hover,
+.carousel__navigation-forward:disabled svg:hover {
+	color: var(--clr-black);
+}
+
+.carousel__navigation-page {
+	color: var(--clr-grey);
+	font-size: 18px;
+}
+
+.carousel__navigation-page span {
+	color: var(--clr-black);
+}
